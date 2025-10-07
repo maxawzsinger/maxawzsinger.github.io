@@ -1,9 +1,14 @@
 # maxawzsinger.github.io
 
+🌀 **Hey there!**  
+I'm a dev based in **Sydney, Au** 
 
-I'm a dev based in Sydney, AU
-Have touched most tech at some point but day to day mostly web stuff
-Interested in anything wacky / social impact projects
-Writing at https://maxawzsinger.substack.com
-Some music at https://soundcloud.com/mtdt247
-Contact me: maxawzsinger@gmail.com or insta @maxthesinger
+🌀 I've touched most tech at some point, but day to day I'm mostly into **web stuff**.  
+🌀 Interested in **anything wacky** or **social impact projects**.  
+
+🌀 **Writing:** [maxawzsinger.substack.com](https://maxawzsinger.substack.com)  
+🌀 **Music:** [soundcloud.com/mtdt247](https://soundcloud.com/mtdt247)  
+
+🌀 **Contact:**  
+- Email: [maxawzsinger@gmail.com](mailto:maxawzsinger@gmail.com)  
+- Instagram: [@maxthesinger](https://instagram.com/maxthesinger)  
