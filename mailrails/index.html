@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mailrails</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0e0e10;
+        --surface: #18181b;
+        --border: #27272a;
+        --text: #ffffff;
+        --text-muted: #ffffff;
+        --accent: #f97316;
+        --accent-dim: #f9731622;
+        --code-bg: #1c1c1f;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Source Serif 4", Georgia, serif;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 80px 24px 120px;
+      }
+
+      .tag {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-dim);
+        padding: 4px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+        color: #fff;
+      }
+
+      h1 span {
+        color: #fff;
+      }
+
+      .subtitle {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        color: #fff;
+        margin-bottom: 32px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-top: 48px;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      code {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.88em;
+        color: #fff;
+      }
+
+      code.highlight {
+        background: var(--code-bg);
+        border: 1px solid var(--border);
+        padding: 2px 7px;
+        border-radius: 4px;
+        color: var(--accent);
+      }
+
+      .flow-diagram {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        background: var(--code-bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 20px 0 24px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+
+      .flow-diagram span {
+        color: #fff;
+      }
+
+      ul {
+        list-style: none;
+        margin: 12px 0 20px;
+        padding: 0;
+      }
+
+      ul li {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 8px;
+        color: #fff;
+        font-size: 1.05rem;
+      }
+
+      ul li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background: var(--accent);
+        opacity: 0.7;
+      }
+
+      .video-wrap {
+        margin: 36px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: #000;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .cta {
+        margin-top: 36px;
+        padding: 24px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        font-size: 1.05rem;
+        color: #fff;
+      }
+
+      .cta strong {
+        color: var(--text);
+      }
+
+      .divider {
+        width: 40px;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+        margin: 48px 0 16px;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="tag">Project</div>
+      <h1>mail<span>rails</span></h1>
+      <div class="subtitle">
+        This is a post to introduce a work in progress. Typed by hand and then
+        passed through GPT-5.4 with the instruction to "make it more concise"
+        and then reviewed for accuracy.
+      </div>
+
+      <p>
+        I wanted to use an agent to help clean up my Gmail inbox, but I didn't
+        want to give it direct browser access, and Gmail's API scopes weren't
+        granular enough for my workflow.
+      </p>
+
+      <p>
+        So I built <code>mailrails</code>, a proxy between the agent and Gmail:
+      </p>
+
+      <div class="flow-diagram">me → agent → <span>mailrails</span> → Gmail</div>
+
+      <p>
+        <code>mailrails</code> exposes only the Gmail actions I want the agent
+        to use. Each action can be configured in one of two modes:
+      </p>
+
+      <ul>
+        <li>auto-execute (<code>auto</code>)</li>
+        <li>requires approval (<code>ask me</code>)</li>
+      </ul>
+
+      <p>
+        That lets the agent request sensitive actions without being able to
+        execute them unchecked. If you connect Telegram,
+        <code>mailrails</code> can notify you when an approval request is
+        waiting.
+      </p>
+
+      <p>
+        Once you authorize <code>mailrails</code> to access your Gmail account,
+        you connect your agent by giving it the
+        <code class="highlight">getHelp</code> endpoint and your
+        <code>mailrails</code> API key.
+      </p>
+
+      <p>
+        A short video probably explains it better than text, so I included a
+        screen recording below.
+      </p>
+
+      <div class="video-wrap">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/eyBeBb9Url4"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <div class="cta">
+        <strong>If you'd like to try it,</strong> let me know and I can add you
+        to the tester list.<br />
+        Otherwise, I'd love any feedback on the idea.
+      </div>
+
+      <h2>Technical Notes</h2>
+
+      <p>The hardest part was building the approval request flow.</p>
+
+      <p>
+        When an approval request is shown to the user, it needs to clearly
+        communicate what approving it will actually do. A human-readable
+        endpoint name plus raw parameters is not enough.
+      </p>
+
+      <p>
+        The tricky case is endpoints that take arrays of entity IDs. For
+        example, if the agent wants to call
+        <code class="highlight">users.messages.batchModify</code>, the user
+        should not have to review a list of opaque Gmail message IDs. They need
+        to see what those IDs refer to, such as the message subject and sender.
+      </p>
+
+      <p>
+        The straightforward solution is to make additional Gmail API calls to
+        enrich those IDs before showing the request. In the
+        <code class="highlight">batchModify</code> case, that means calling
+        <code class="highlight">users.messages.get</code> for each message ID so
+        the approval request can display something meaningful. The problem is
+        this can very easily exceed Gmail API rate limits.
+      </p>
+
+      <p>
+        After some experimentation, I ended up adding a Gmail API request cache.
+        That made these enrichment calls cheap enough to use freely.
+      </p>
+    </div>
+  </body>
+</html>
